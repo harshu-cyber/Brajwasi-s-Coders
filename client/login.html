@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Log In | Brajwasi's Coders</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/forms.css">
+</head>
+<body>
+
+  <!-- Ambient Background Glow Orbs -->
+  <div class="bg-glow-orb" style="top: 10%; right: 5%;"></div>
+  <div class="bg-glow-orb gold" style="bottom: 10%; left: 5%;"></div>
+
+  <!-- Back to Home -->
+  <a href="/" class="back-to-home">
+    <i class="fas fa-arrow-left"></i> Back To Home
+  </a>
+
+  <!-- Login Portal -->
+  <main class="auth-page">
+    <div class="auth-container">
+      <div class="auth-header">
+        <a href="/" class="logo">
+          <img src="/assets/brand/logo.png" alt="Brajwasi's Coders Logo">
+          <span class="logo-text">Brajwasi's <span>Coders</span></span>
+        </a>
+        <h2>Welcome Back</h2>
+        <p>Log in to access your administrative dashboard and project leads.</p>
+      </div>
+
+      <div class="glass-card auth-card">
+        <!-- Error & Success Message Alerts -->
+        <div id="auth-alert" style="display: none;"></div>
+
+        <form class="auth-form" id="login-form">
+          <!-- Email -->
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <div class="auth-input-wrapper">
+              <input type="email" id="login-email" class="auth-input" placeholder="e.g., admin@brajwasicoders.com" required>
+              <i class="fas fa-envelope auth-input-icon"></i>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <div class="auth-input-wrapper">
+              <input type="password" id="login-password" class="auth-input" placeholder="Enter your password" required>
+              <i class="fas fa-lock auth-input-icon"></i>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="gradient-btn btn-primary auth-btn">
+            Log In <i class="fas fa-sign-in-alt" style="margin-left: 8px;"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="/register">Create One Here</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Auth Logic Javascript -->
+  <script src="/scripts/auth.js"></script>
+</body>
+</html>

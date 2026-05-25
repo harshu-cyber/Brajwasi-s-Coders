@@ -1,0 +1,218 @@
+/* ============================================================
+   BRAJWASI'S CODERS — AUTHENTICATION FORM STYLES
+   ============================================================ */
+
+/* ── Page Layout ─────────────────────────────────────────── */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 40px 20px;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+/* Subtle grid texture overlay */
+.auth-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-header .logo {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.auth-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.auth-header p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ── Auth Card ───────────────────────────────────────────── */
+.auth-card {
+  padding: 36px 36px 32px;
+  border-radius: 20px;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* ── Form Groups ─────────────────────────────────────────── */
+.auth-form .form-group {
+  margin-bottom: 18px;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* ── Input Wrapper ───────────────────────────────────────── */
+.auth-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 13px 18px 13px 46px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: var(--text-white);
+  font-size: 0.925rem;
+  font-family: var(--font-body);
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.875rem;
+}
+
+.auth-input:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+  outline: none;
+}
+
+.auth-input:focus ~ .auth-input-icon,
+.auth-input:focus + .auth-input-icon {
+  color: var(--gold);
+}
+
+/* ── Auth Submit Button ──────────────────────────────────── */
+.auth-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-radius: 10px;
+}
+
+/* ── Footer link ─────────────────────────────────────────── */
+.auth-footer {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: var(--ease-fast);
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 6px var(--gold-glow);
+}
+
+/* ── Back to Home Link ───────────────────────────────────── */
+.back-to-home {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  z-index: 100;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--ease-fast);
+}
+
+.back-to-home:hover {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* ── Alert Messages ──────────────────────────────────────── */
+.alert {
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  color: #a7f3d0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .auth-card { padding: 28px 20px 24px; }
+  .back-to-home { top: 16px; left: 16px; padding: 6px 12px; }
+  .auth-header h2 { font-size: 1.4rem; }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Careers at Brajwasi's Coders — Join our premium software development agency from Mathura-Vrindavan. Apply for part-time or full-time tech roles.">
+  <title>Careers | Brajwasi's Coders</title>
+  <link rel="icon" type="image/png" href="/assets/brand/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/forms.css">
+  <style>
+    /* Careers specific custom overrides to maintain professional spacing */
+    .careers-page {
+      padding: 140px 0 80px;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    .careers-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .perks-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .perk-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .perk-item:last-child {
+      margin-bottom: 0;
+    }
+    .perk-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .perk-text h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text-white);
+    }
+    .perk-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .form-select-custom {
+      appearance: none;
+      -webkit-appearance: none;
+      background: rgba(255, 255, 255, 0.04) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23D4AF37'><path d='M1 3h10L6 9z'/></svg>") no-repeat calc(100% - 18px) center;
+      padding-right: 40px !important;
+    }
+    .form-select-custom option {
+      background-color: #050816;
+      color: var(--text-white);
+    }
+    @media (max-width: 991px) {
+      .careers-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .careers-page {
+        padding: 100px 0 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Background Glow Orbs -->
+  <div class="bg-glow-orb" style="top: 15%; right: 10%;"></div>
+  <div class="bg-glow-orb gold" style="bottom: 20%; left: 5%;"></div>
+
+  <!-- Reusable Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Careers Section -->
+  <main class="careers-page">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header reveal visible">
+        <span class="sub-heading">We Are Hiring</span>
+        <h2>Work With <span>Devotion</span></h2>
+        <p>Combine your engineering craft with dedication. Apply to our team for part-time or full-time opportunities and work on world-class digital systems.</p>
+      </div>
+
+      <div class="careers-grid">
+        
+        <!-- Application Form -->
+        <div class="contact-form-card reveal visible">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-white); margin-bottom: 6px;">Submit Your Application</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 28px;">Fill out the recruitment form and we'll reach back shortly.</p>
+          
+          <form id="career-apply-form">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="career-name">Full Name</label>
+              <input type="text" id="career-name" class="form-input" placeholder="e.g., Gopal Das" required>
+            </div>
+            
+            <!-- Email & Phone -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="career-email">Email Address</label>
+                <input type="email" id="career-email" class="form-input" placeholder="gopal@example.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="career-phone">Phone Number</label>
+                <input type="tel" id="career-phone" class="form-input" placeholder="e.g., +91 9876543210" required>
+              </div>
+            </div>
+
+            <!-- Position & Type -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="career-role">Desired Position</label>
+                <select id="career-role" class="form-input form-select-custom" required>
+                  <option value="" disabled selected>Select a position...</option>
+                  <option value="Frontend Developer">Frontend Developer</option>
+                  <option value="Backend Developer">Backend Developer</option>
+                  <option value="Full Stack Developer">Full Stack Developer</option>
+                  <option value="UI/UX Designer">UI/UX Designer</option>
+                  <option value="Mobile App Developer">Mobile App Developer</option>
+                  <option value="Project Manager">Project Manager</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="career-type">Job Type</label>
+                <select id="career-type" class="form-input form-select-custom" required>
+                  <option value="" disabled selected>Select job type...</option>
+                  <option value="full-time">Full-Time (Full Timer)</option>
+                  <option value="part-time">Part-Time (Part Timer)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Experience & Resume Link -->
+            <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; margin-bottom: 20px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="career-exp">Experience Level</label>
+                <select id="career-exp" class="form-input form-select-custom" required>
+                  <option value="" disabled selected>Select level...</option>
+                  <option value="Intern / Fresher">Intern / Fresher</option>
+                  <option value="Junior (1-2 years)">Junior (1-2 years)</option>
+                  <option value="Mid-Level (2-5 years)">Mid-Level (2-5 years)</option>
+
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="career-resume">Resume / Portfolio Link</label>
+                <input type="url" id="career-resume" class="form-input" placeholder="e.g., Google Drive or LinkedIn URL" required>
+              </div>
+            </div>
+
+            <!-- Cover Letter / Notes -->
+            <div class="form-group">
+              <label for="career-message">Brief Introduction / Skills</label>
+              <textarea id="career-message" class="form-input" placeholder="Tell us briefly about your skillset and programming interest..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+              Submit Application <i class="fas fa-paper-plane"></i>
+            </button>
+            
+            <div id="career-form-feedback" class="form-message"></div>
+          </form>
+        </div>
+
+        <!-- Perks / Details -->
+        <div class="perks-card reveal visible">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 8px;">Why Join Brajwasi's Coders?</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 36px;">We reject standard template development, focus on clean architecture, and strive to treat software engineering as a devotional art.</p>
+
+          <div class="perks-list">
+            
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-clock"></i></div>
+              <div class="perk-text">
+                <h4>Part-Time & Full-Time Versatility</h4>
+                <p>Fit your schedules perfectly. We offer flexible shifts for part-time specialists and core permanent roles for full-time engineers.</p>
+              </div>
+            </div>
+
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="perk-text">
+                <h4>Premium Modern Stacks</h4>
+                <p>Develop using React, Node.js, Express, MongoDB, Socket.io, and advanced animation systems. Expand your skillset daily.</p>
+              </div>
+            </div>
+
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="perk-text">
+                <h4>Clean Architecture Standards</h4>
+                <p>Learn to design robust REST APIs, secure JWT authorization gates, structured MongoDB schemas, and pixel-perfect layouts.</p>
+              </div>
+            </div>
+
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-dharmachakra"></i></div>
+              <div class="perk-text">
+                <h4>Spiritual & Cooperative Culture</h4>
+                <p>Work in an environment rooted in the values of Mathura-Vrindavan — honesty, devotion, mutual respect, and high integrity.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Reusable Components Inject Scripts -->
+  <script src="/components/navbar.js"></script>
+  <script src="/components/footer.js"></script>
+  <script src="/scripts/careers.js"></script>
+</body>
+</html>

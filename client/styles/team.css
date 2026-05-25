@@ -1,0 +1,80 @@
+/* =========================================================
+   OUR TEAM – PAGE SPECIFIC STYLES
+   ========================================================= */
+
+.team-section {
+  background: var(--bg-primary);
+  padding: 80px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Card base styling */
+.team-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  text-align: center;
+  padding: 30px 20px;
+  transition: var(--ease);
+  backdrop-filter: blur(8px);
+  /* animation setup */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+.team-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px var(--gold-glow);
+  background: rgba(255,255,255,0.06);
+}
+
+.team-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  border: 3px solid var(--gold);
+}
+
+.team-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--text-white);
+  margin-bottom: 6px;
+}
+
+.team-role {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Staggered delays */
+.team-grid .team-card:nth-child(1) { --delay: 0.2s; }
+.team-grid .team-card:nth-child(2) { --delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Light‑theme overrides */
+.light-theme .team-card {
+  background: #fff;
+  border-color: rgba(15,23,42,0.08);
+}
+.light-theme .team-card:hover {
+  border-color: var(--gold);
+  background: #fff;
+}
+.light-theme .team-photo {
+  border-color: var(--gold);
+}

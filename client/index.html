@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brajwasi's Coders — Premium Software & Web Development Agency from Mathura-Vrindavan. Custom web apps, UI/UX design, dashboards, and full-stack engineering with devotion.">
+  <title>Brajwasi's Coders | Premium Software & Web Development Agency</title>
+  <link rel="icon" type="image/png" href="/assets/brand/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="/assets/brand/logo.png" alt="Brajwasi's Coders Logo" class="loader-logo-img">
+    <div class="loader-logo">ब्रजवासी Coders</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Navbar (injected by component) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ============================================
+       HERO SECTION — Full Screen with Particles
+       ============================================ -->
+  <section class="hero" id="home">
+    <canvas id="bg-canvas"></canvas>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span> Building Digital Solutions With Devotion
+          </div>
+          <h1>We Build <span class="gradient-text">Premium Digital</span> Experiences</h1>
+          <p>From Mathura-Vrindavan to the world — Brajwasi's Coders engineers ultra-modern web applications, blazing-fast dashboards, and pixel-perfect UI systems for ambitious brands.</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-gold">
+              Start Your Project <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#portfolio" class="btn btn-outline">
+              View Our Work
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <h3>50+</h3>
+              <p>Projects Delivered</p>
+            </div>
+            <div class="hero-stat">
+              <h3>99%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+            <div class="hero-stat">
+              <h3>24/7</h3>
+              <p>Support & Maintenance</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="orbit-container">
+            <div class="orbit-center">
+              <img src="/assets/brand/logo.png" alt="Brajwasi's Coders Logo">
+              <div class="hero-logo-glow"></div>
+            </div>
+            <div class="orbit-ring"></div>
+            <div class="orbit-item html" title="HTML5"><i class="fab fa-html5"></i></div>
+            <div class="orbit-item css" title="CSS3"><i class="fab fa-css3-alt"></i></div>
+            <div class="orbit-item js" title="JavaScript"><i class="fab fa-js"></i></div>
+            <div class="orbit-item react" title="React.js"><i class="fab fa-react"></i></div>
+            <div class="orbit-item node" title="Node.js"><i class="fab fa-node-js"></i></div>
+            <div class="orbit-item python" title="Python"><i class="fab fa-python"></i></div>
+            <div class="orbit-item db" title="MongoDB/Databases"><i class="fas fa-database"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CLIENT LOGOS MARQUEE
+       ============================================ -->
+  <section class="clients-section">
+    <div class="logo-track">
+      <span class="client-logo">TechCorp</span>
+      <span class="client-logo">Vrinda Enterprises</span>
+      <span class="client-logo">MathuraMart</span>
+      <span class="client-logo">AuraFin</span>
+      <span class="client-logo">GoPala Systems</span>
+      <span class="client-logo">DhamDigital</span>
+      <span class="client-logo">NandaVerse</span>
+      <span class="client-logo">BrajBuild</span>
+      <span class="client-logo">YamunaCloud</span>
+      <span class="client-logo">RadheCode</span>
+      <!-- Duplicated for infinite scroll -->
+      <span class="client-logo">TechCorp</span>
+      <span class="client-logo">Vrinda Enterprises</span>
+      <span class="client-logo">MathuraMart</span>
+      <span class="client-logo">AuraFin</span>
+      <span class="client-logo">GoPala Systems</span>
+      <span class="client-logo">DhamDigital</span>
+      <span class="client-logo">NandaVerse</span>
+      <span class="client-logo">BrajBuild</span>
+      <span class="client-logo">YamunaCloud</span>
+      <span class="client-logo">RadheCode</span>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STATS SECTION
+       ============================================ -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box reveal">
+          <div>
+            <div class="stat-number" data-count="50">0+</div>
+            <p class="stat-label">Projects Launched Globally</p>
+          </div>
+        </div>
+        <div class="stat-box reveal">
+          <div>
+            <div class="stat-number" data-count="30">0+</div>
+            <p class="stat-label">Happy Clients Worldwide</p>
+          </div>
+        </div>
+        <div class="stat-box reveal">
+          <div>
+            <div class="stat-number" data-count="5">0+</div>
+            <p class="stat-label">Years of Experience</p>
+          </div>
+        </div>
+        <div class="stat-box reveal">
+          <div>
+            <div class="stat-number" data-count="99">0%</div>
+            <p class="stat-label">On-Time Delivery Rate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES — Sticky Dark Cards
+       ============================================ -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sub-heading">What We Do</span>
+        <h2>High-Performance <span>Services</span></h2>
+        <p>We deliver end-to-end engineering solutions that combine modern design with rock-solid architecture.</p>
+      </div>
+
+      <div class="services-stack">
+        <!-- Service 1 -->
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <span class="service-number">01</span>
+            <h3>Website Development</h3>
+            <p>We build highly engaging corporate and business websites with stunning responsive animations, optimized for Core Web Vitals and premium search rankings.</p>
+            <ul>
+              <li>Custom responsive landing pages</li>
+              <li>Corporate & portfolio websites</li>
+              <li>SEO-optimized architecture</li>
+              <li>Performance & accessibility audits</li>
+            </ul>
+          </div>
+          <div class="service-card-visual">
+            <div class="service-icon-large"><i class="fas fa-laptop-code"></i></div>
+          </div>
+          <a href="#contact" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <span class="service-number">02</span>
+            <h3>Web Applications</h3>
+            <p>Scalable, state-of-the-art web architectures tailored to your functional workflows. Secure database design and custom application portals built with modern Node.js stack.</p>
+            <ul>
+              <li>MERN stack applications</li>
+              <li>Real-time data processing</li>
+              <li>REST & GraphQL API design</li>
+              <li>Microservice architecture</li>
+            </ul>
+          </div>
+          <div class="service-card-visual">
+            <div class="service-icon-large"><i class="fas fa-cubes"></i></div>
+          </div>
+          <a href="#contact" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <span class="service-number">03</span>
+            <h3>UI/UX Design</h3>
+            <p>Immersive layout designs featuring dark premium aesthetics, glassmorphism, responsive navigation flow, and user-centric wireframes that leave an impression.</p>
+            <ul>
+              <li>Figma & Adobe XD prototyping</li>
+              <li>Dark mode & glassmorphism design</li>
+              <li>User journey mapping</li>
+              <li>Design system creation</li>
+            </ul>
+          </div>
+          <div class="service-card-visual">
+            <div class="service-icon-large"><i class="fas fa-palette"></i></div>
+          </div>
+          <a href="#contact" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <span class="service-number">04</span>
+            <h3>Dashboard Systems</h3>
+            <p>Bespoke dashboard panels with real-time lead analytics, user role controls, JWT route protection, and fast-updating data tables to coordinate operations.</p>
+            <ul>
+              <li>Admin & CRM dashboards</li>
+              <li>Real-time analytics & metrics</li>
+              <li>JWT authentication systems</li>
+              <li>Role-based access control</li>
+            </ul>
+          </div>
+          <div class="service-card-visual">
+            <div class="service-icon-large"><i class="fas fa-chart-pie"></i></div>
+          </div>
+          <a href="#contact" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <span class="service-number">05</span>
+            <h3>Maintenance & Support</h3>
+            <p>Continuous uptime tracking, secure database backups, routine patch deployment, speed optimization, and live ticketing support to keep your software optimal.</p>
+            <ul>
+              <li>24/7 uptime monitoring</li>
+              <li>Security patch deployment</li>
+              <li>Performance optimization</li>
+              <li>Dedicated support channels</li>
+            </ul>
+          </div>
+          <div class="service-card-visual">
+            <div class="service-icon-large"><i class="fas fa-headset"></i></div>
+          </div>
+          <a href="#contact" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT SECTION
+       ============================================ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-image-wrap">
+            <img src="/assets/brand/logo.png" alt="Brajwasi's Coders Team" style="object-fit: contain; background: #050816;">
+          </div>
+          <div class="about-floating-badge">
+            <h3>5+</h3>
+            <p>Years of Excellence</p>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="sub-heading">Who We Are</span>
+          <h2>A Premium Agency Rooted in Braj Culture</h2>
+          <p>Founded in the sacred lands of Mathura-Vrindavan, Brajwasi's Coders combines spiritual values of dedication, precision, and devotion with cutting-edge technology to create world-class digital solutions.</p>
+          <p>We reject generic templates, instead choosing to build handcrafted digital experiences that give our clients a dominant digital presence across every platform.</p>
+          
+          <div class="about-features">
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Clean Code Architecture</span>
+            </div>
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Agile Development</span>
+            </div>
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Secure JWT Systems</span>
+            </div>
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>MongoDB Expertise</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-gold">Partner With Us <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA BANNER
+       ============================================ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Build Something Extraordinary?</h2>
+      <p>Let's transform your idea into a premium digital reality. Our team is ready to craft your next breakthrough.</p>
+      <a href="#contact" class="btn-dark">Get Free Consultation <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTFOLIO — Slider
+       ============================================ -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sub-heading">Featured Projects</span>
+        <h2>Our Selected <span>Masterpieces</span></h2>
+        <p>Every project is a unique story of transformation. Here are some of the brands we've empowered.</p>
+      </div>
+
+      <div class="portfolio-slider">
+        <div class="portfolio-track" id="portfolio-track">
+          <!-- Slide 1 -->
+          <div class="portfolio-slide">
+            <div class="portfolio-slide-content">
+              <h4>Transit & Automation</h4>
+              <h3>DTCSL Bus Scheduler</h3>
+              <p>A highly secure, real-time automated bus scheduling, route management, and driver dispatching control dashboard built for complex municipal transit operations.</p>
+              <div class="portfolio-tags">
+                <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.io</span><span>Leaflet.js</span>
+              </div>
+              <a href="#contact" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.85rem;">Discuss Similar Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="portfolio-slide-image">
+              <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3a8a, #050816); color: var(--gold);">
+                <i class="fas fa-bus" style="font-size:2.5rem;"></i> DTCSL Automated System
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="portfolio-slide">
+            <div class="portfolio-slide-content">
+              <h4>EdTech & Portal</h4>
+              <h3>Kidzee Public School</h3>
+              <p>An engaging, interactive public school portal featuring parent communication channels, class schedules, admission inquiries, and modern responsive galleries.</p>
+              <div class="portfolio-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>Admin CRM</span>
+              </div>
+              <a href="#contact" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.85rem;">Discuss Similar Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="portfolio-slide-image">
+              <div class="project-placeholder" style="background: linear-gradient(135deg, #b45309, #050816); color: var(--blue);">
+                <i class="fas fa-school" style="font-size:2.5rem;"></i> Kidzee School Web
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="portfolio-slide">
+            <div class="portfolio-slide-content">
+              <h4>Hospitality & Command</h4>
+              <h3>Bombay Chaupati Hotel</h3>
+              <p>A premium hospitality command center supporting table reservation logs, invoice billing engines, active inventory control, and secure admin authorization panels.</p>
+              <div class="portfolio-tags">
+                <span>Node.js</span><span>MongoDB</span><span>REST API</span><span>JWT Auth</span><span>Chart.js</span>
+              </div>
+              <a href="#contact" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.85rem;">Discuss Similar Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="portfolio-slide-image">
+              <div class="project-placeholder" style="background: linear-gradient(135deg, #065f46, #050816); color: var(--gold);">
+                <i class="fas fa-hotel" style="font-size:2.5rem;"></i> Bombay Chaupati HMS
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-nav">
+          <button class="portfolio-nav-btn" id="portfolio-prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="portfolio-nav-btn" id="portfolio-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROCESS — Interactive Steps
+       ============================================ -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sub-heading">How We Work</span>
+        <h2>Engineered for <span>Success</span></h2>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step active">
+          <div class="step-number">01</div>
+          <div class="step-title">Discussion</div>
+          <p class="step-desc">We start by deeply understanding your business objectives, matching your goals, and laying out the conceptual user flow together.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-title">Planning</div>
+          <p class="step-desc">Creating exact wireframes, database schemas, color palettes, and defining robust milestones inside our sprint documentation.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-title">Development</div>
+          <p class="step-desc">Writing clean, production-ready, reusable code components. Building secure Node.js APIs and engineering MongoDB database architectures.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-title">Testing</div>
+          <p class="step-desc">Running detailed QA checks across device viewports, verifying JWT protection systems, and optimizing page load latency metrics.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">05</div>
+          <div class="step-title">Deployment</div>
+          <p class="step-desc">Launching your platform onto production servers with secure SSL certificates, CI/CD pipelines, and ongoing performance tracking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       ============================================ -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sub-heading">Client Love</span>
+        <h2>What Our <span>Clients</span> Say</h2>
+      </div>
+
+      <div class="testimonial-carousel">
+        <div class="testimonial-slides">
+          <div class="glass-card testimonial-card" id="testimonial-active">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Brajwasi's Coders completely transformed our brand. They didn't just build a website; they designed an entire digital ecosystem. Their premium dark UI and smooth animations gave us a look our customers absolutely love."</p>
+            <div class="client-info">
+              <h4>Aniket Sharma</h4>
+              <p>Founder, Vrinda Enterprises</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION
+       ============================================ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sub-heading">Get In Touch</span>
+        <h2>Start Your <span>Digital Journey</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-side reveal">
+          <div>
+            <h3>Ready to create something <span class="glow-text-gold">extraordinary</span>?</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Fill out the inquiry form or connect with us directly. We are excited to build your next-generation application!
+            </p>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon email-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <h4>Email Us</h4>
+                <a href="mailto:info@brajwasicoders.com">info@brajwasicoders.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-text">
+                <h4>Chat On WhatsApp</h4>
+                <a href="https://wa.me/919999999999" target="_blank">+91 99999 99999</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon location-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-text">
+                <h4>Our Dham Location</h4>
+                <p>Mathura-Vrindavan, Uttar Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-dark); margin-bottom: 6px;">Send Us Your Requirement</h3>
+          <p style="color: var(--text-dark-muted); font-size: 0.85rem; margin-bottom: 28px;">We'll get back to you within 24 hours.</p>
+          <form id="agency-contact-form">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g., Shridhar Dev" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g., shridhar@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Project Subject</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="e.g., E-Commerce Application" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Project Details</label>
+              <textarea id="contact-message" class="form-input" placeholder="Describe your web design or software development scope..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              Send Inquiry <i class="fas fa-paper-plane"></i>
+            </button>
+            <div id="contact-form-feedback" class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected by component) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/components/navbar.js"></script>
+  <script src="/components/footer.js"></script>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>

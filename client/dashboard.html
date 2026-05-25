@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brajwasi's Coders Admin Dashboard — Manage leads, client inquiries, and project pipeline.">
+  <title>Admin Dashboard | Brajwasi's Coders</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/dashboard.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <img src="/assets/brand/logo.png" alt="Brajwasi's Coders" class="loader-logo-img" onerror="this.style.display='none'">
+    <div class="loader-logo">ब्रजवासी Coders</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Ambient Background Glow Orbs -->
+  <div class="bg-glow-orb" style="top: 10%; left: 5%;"></div>
+  <div class="bg-glow-orb gold" style="bottom: 10%; right: 5%;"></div>
+
+  <!-- ── Dashboard Navbar ── -->
+  <header class="navbar scrolled" id="dash-navbar">
+    <div class="nav-main">
+      <div class="container nav-container">
+
+        <!-- Brand -->
+        <a href="/" class="logo">
+          <img src="/assets/brand/logo.png" alt="Brajwasi's Coders Logo">
+          <span class="logo-text">Brajwasi's <span>Coders</span></span>
+        </a>
+
+        <!-- Dashboard label (desktop only) -->
+        <div class="dash-nav-center">
+          <span class="dash-page-label">
+            <i class="fas fa-user-shield"></i> Admin CRM Dashboard
+          </span>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="nav-actions" style="display:flex !important;">
+          <!-- User Badge -->
+          <div class="dash-user-pill glass-card">
+            <div class="user-avatar" id="header-avatar">–</div>
+            <span class="user-name" id="header-username">Loading…</span>
+          </div>
+
+          <!-- Logout -->
+          <button id="logout-btn" class="gradient-btn btn-secondary nav-btn-mini">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main Content ── -->
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+
+      <!-- Welcome Header -->
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>Agency CRM Lead Panel</h1>
+          <p>Analyze inbound customer inquiries and career applications in real-time.</p>
+        </div>
+      </div>
+
+      <!-- Analytic Metrics Cards -->
+      <div class="metrics-grid" style="grid-template-columns: repeat(4, 1fr) !important; gap: 16px;">
+
+        <div class="glass-card metric-card">
+          <div class="metric-info">
+            <h3>Contact Leads</h3>
+            <div class="metric-number blue" id="metric-contact-total">0</div>
+          </div>
+          <div class="metric-icon blue">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <div class="metric-info">
+            <h3>New Contacts</h3>
+            <div class="metric-number gold" id="metric-contact-new">0</div>
+          </div>
+          <div class="metric-icon gold">
+            <i class="fas fa-bell"></i>
+          </div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <div class="metric-info">
+            <h3>Career Applications</h3>
+            <div class="metric-number" id="metric-career-total" style="color: #a78bfa; text-shadow: 0 0 10px rgba(167, 139, 250, 0.35);">0</div>
+          </div>
+          <div class="metric-icon" style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.2); color: #a78bfa;">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <div class="metric-info">
+            <h3>New Career Apps</h3>
+            <div class="metric-number" id="metric-career-new" style="color: var(--success-color); text-shadow: 0 0 10px rgba(16, 185, 129, 0.35);">0</div>
+          </div>
+          <div class="metric-icon" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: var(--success-color);">
+            <i class="fas fa-user-check"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tab Switcher Category Buttons -->
+      <div class="dashboard-tabs" style="display: flex; gap: 12px; margin-bottom: 24px; margin-top: 10px;">
+        <button class="tab-btn active" id="tab-contacts" style="padding: 12px 24px; font-family: var(--font-heading); font-weight: 700; border-radius: 8px; border: 1px solid var(--gold); background: var(--gold); color: #000; cursor: pointer; transition: all 0.3s ease;">
+          <i class="fas fa-envelope-open-text" style="margin-right: 8px;"></i> Contact Leads
+        </button>
+        <button class="tab-btn" id="tab-careers" style="padding: 12px 24px; font-family: var(--font-heading); font-weight: 700; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); color: var(--text-white); cursor: pointer; transition: all 0.3s ease;">
+          <i class="fas fa-briefcase" style="margin-right: 8px;"></i> Career Applications
+        </button>
+      </div>
+
+      <!-- Leads Table -->
+      <div class="glass-card leads-section">
+        <div class="leads-header">
+          <h2 id="table-category-title">Customer Enquiries</h2>
+          <div class="leads-filter" id="leads-filter-container">
+            <!-- Filter buttons injected dynamically by JS -->
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="leads-table">
+            <thead>
+              <tr id="leads-table-header">
+                <!-- Headers injected dynamically by JS -->
+              </tr>
+            </thead>
+            <tbody id="leads-table-body">
+              <tr>
+                <td colspan="5" class="empty-state">
+                  <div class="empty-state-icon"><i class="fas fa-spinner fa-spin"></i></div>
+                  <h3>Fetching dashboard analytics…</h3>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Dashboard Script -->
+  <script src="/scripts/dashboard.js"></script>
+</body>
+</html>
