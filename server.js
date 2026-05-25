@@ -7,9 +7,12 @@ const connectDB = require('./server/config/db');
 const authRoutes = require('./server/routes/authRoutes');
 const contactRoutes = require('./server/routes/contactRoutes');
 const careerRoutes = require('./server/routes/careerRoutes');
+const seedAdmin = require('./server/utils/seedAdmin');
 
-// Initialize database connection
-connectDB();
+// Initialize database connection and auto-seed admin
+connectDB().then(() => {
+  seedAdmin();
+});
 
 const app = express();
 

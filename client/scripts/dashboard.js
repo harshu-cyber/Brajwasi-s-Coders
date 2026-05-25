@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  // Only admin users can access the dashboard
+  if (user.role !== 'admin') {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    alert('🚫 Access Denied: Admin privileges required.');
+    window.location.href = '/login';
+    return;
+  }
+
   // 2. PRELOADER ACTION
   const preloader = document.getElementById('preloader');
   function hidePreloader() {
