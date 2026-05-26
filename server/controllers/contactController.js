@@ -5,18 +5,19 @@ const Contact = require('../models/Contact');
 // @access  Public
 const submitContact = async (req, res) => {
   try {
-    const { name, email, subject, message } = req.body;
+    const { name, email, phone, subject, message } = req.body;
 
-    if (!name || !email || !subject || !message) {
-      return res.status(400).json({ success: false, error: 'Please enter all fields' });
-    }
+      if (!name || !email || !phone || !subject || !message) {
+        return res.status(400).json({ success: false, error: 'Please enter all fields' });
+      }
 
-    const contact = await Contact.create({
-      name,
-      email,
-      subject,
-      message
-    });
+      const contact = await Contact.create({
+        name,
+        email,
+        phone,
+        subject,
+        message
+      });
 
     res.status(201).json({
       success: true,

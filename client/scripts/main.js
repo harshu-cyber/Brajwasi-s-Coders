@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Get Values
       const name = document.getElementById('contact-name').value.trim();
       const email = document.getElementById('contact-email').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
       const subject = document.getElementById('contact-subject').value.trim();
       const message = document.getElementById('contact-message').value.trim();
 
@@ -161,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ name, email, subject, message })
+          body: JSON.stringify({ name, email, phone, subject, message })
         });
 
         const data = await response.json();

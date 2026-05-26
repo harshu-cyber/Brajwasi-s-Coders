@@ -4,58 +4,98 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the visionaries and expert developers behind Brajwasi's Coders, engineering custom software and web experiences." />
   <title>Our Team – Brajwasi's Coders</title>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Main Styles & Team Specific Styles -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/team.css" />
 </head>
 <body>
+  <!-- Dynamic Navbar Placeholder -->
   <div id="navbar-placeholder"></div>
 
+  <!-- Hero Header Section -->
   <div class="team-hero">
-    <h1>Meet Our Visionaries</h1>
-    <p>Driving innovation with passion and purpose.</p>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-wrap">
+      <span class="hero-badge"><span class="dot"></span> Meet the Creators</span>
+      <h1>Our Devoted Team</h1>
+      <p>The engineering minds and design visionaries behind Brajwasi's Coders.</p>
+    </div>
   </div>
 
+  <!-- Team Grid Section -->
+  <section class="team-section">
     <div class="container">
-      <div class="section-header reveal">
-        <h2>Our Team</h2>
-        <p class="section-subtitle">The visionaries behind Brajwasi's Coders</p>
+      <div class="section-header reveal visible">
+        <span class="sub-heading">Executive Leadership</span>
+        <h2>Meet Our <span>Visionaries</span></h2>
+        <p class="section-subtitle">Combining technical craftsmanship with high dedication to engineer next-generation platforms.</p>
       </div>
-      <div class="team-grid reveal">
+
+      <div class="team-grid">
+        <!-- Card 1: Harsh Agnihotri -->
         <div class="team-card">
-          <img src="/assets/team/harsh_agnihotri.png" alt="Harsh Agnihotri" class="team-photo" />
+          <div class="team-photo-wrap">
+            <img src="/assets/team/harsh_agnihotri.png" alt="Harsh Agnihotri" class="team-photo" onerror="this.src='/assets/brand/logo.png';" />
+            <div class="photo-glow"></div>
+          </div>
           <h3>Harsh Agnihotri</h3>
           <p class="team-role">Founder &amp; CEO</p>
+          <p class="team-bio">Lead architect and visionary behind Brajwasi's Coders. Harsh directs the company's technical strategy, backend development, and client integrations with rock-solid engineering standards.</p>
+          
+          <div class="team-skills">
+            <span>MERN Stack</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>Django</span>
+            <span>Flask</span>
+            <span>API Design</span>
+          </div>
+
+          <div class="team-socials">
+            <a href="https://github.com/harshu-cyber" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/harsh-agnihotri-ai/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+               <a href="https://wa.me/919119974589" target="_blank" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+               <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
+
+        <!-- Card 2: Akshat Agrawal -->
         <div class="team-card">
-          <img src="/assets/team/akshat_agrawal.png" alt="Akshat Aggrawal" class="team-photo" />
+          <div class="team-photo-wrap">
+            <img src="/assets/team/akshat_agrawal.png" alt="Akshat Agrawal" class="team-photo" onerror="this.src='/assets/brand/logo.png';" />
+            <div class="photo-glow"></div>
+          </div>
           <h3>Akshat Agrawal</h3>
           <p class="team-role">Founder &amp; CEO</p>
+          <p class="team-bio">Co-founder and product strategist. Akshat oversees UX/UI designs, front-end performance optimization, and client deployment cycles, turning complex requirements into beautiful digital products.</p>
+          
+          <div class="team-skills">
+            <span>React.js</span>
+            <span>UI/UX Design</span>
+            <span>JWT Security</span>
+            <span>CSS3/Animations</span>
+          </div>
+
+          <div class="team-socials">
+            <a href="https://github.com/AkshatAg638" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/akshat-agrawal-0b6a9b320?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:akshatagrawal638@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="logo"><img src="/assets/brand/logo.png" alt="Logo" /></a>
-        <p>Building premium digital experiences for agencies and brands.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Links</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Brajwasi's Coders. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Dynamic Footer Placeholder -->
+  <div id="footer-placeholder"></div>
 
+  <!-- Component Injection & Main Scripts -->
+  <script src="/components/navbar.js"></script>
+  <script src="/components/footer.js"></script>
   <script src="/scripts/main.js"></script>
 </body>
 </html>

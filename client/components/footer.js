@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
               <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/919119974589" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
 
