@@ -1,0 +1,21 @@
+{
+  "name": "Brajwasi's Coders",
+  "short_name": "Brajwasi",
+  "description": "Premium IT/Software Development Agency",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0C10",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/assets/brand/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
