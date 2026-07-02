@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and auth pages from being indexed
+Disallow: /dashboard
+Disallow: /register
+
+# Sitemap location
+Sitemap: https://brajwasi-s-coders.vercel.app/sitemap.xml
